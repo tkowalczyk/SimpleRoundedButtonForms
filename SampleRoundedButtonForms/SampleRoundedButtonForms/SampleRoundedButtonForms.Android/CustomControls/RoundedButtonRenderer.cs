@@ -39,13 +39,30 @@ namespace SampleRoundedButtonForms.Droid.CustomControls
 
             canvas.DrawRoundRect(new RectF(rc), (float)pb.CornerRadius, (float)pb.CornerRadius, p);
 
-            p.Color = pb.ColorText.ToAndroid();
-            p.TextSize = pb.FontSize;
+            Paint pText = new Paint()
+            {
+                AntiAlias = true,
+            };
 
-            double xPos = (pb.Width / 2);
-            double yPos = (pb.Height / 2);
+            pText.Color = pb.ColorText.ToAndroid();
+            pText.TextSize = pb.FontSize;
+            
+            ////METHOD 1
+            double xPos = (pb.Width / 2f);
+            double yPos = (pb.Height / 2f) - ((pText.Descent() + pText.Ascent()) / 2f);
 
-            canvas.DrawText(pb.Text, (float)(xPos), (float)(yPos), p);
+            canvas.DrawText(pb.Text, (float)(xPos), (float)(yPos), pText);
+
+            ////METHOD 2
+            //Rect areaRect = new Rect((int)pb.Bounds.Left, (int)pb.Bounds.Top, (int)pb.Bounds.Right, (int)pb.Bounds.Bottom);
+
+            //RectF bounds = new RectF(areaRect);
+            //bounds.Right = p.MeasureText(pb.Text, 0, pb.Text.Length);
+            //bounds.Bottom = p.Descent() - p.Ascent();
+            //bounds.Left += (areaRect.Width() - bounds.Right) / 2.0f;
+            //bounds.Top += (areaRect.Height() - bounds.Bottom) / 2.0f;
+
+            //canvas.DrawText(pb.Text, bounds.Left, bounds.Top - p.Ascent(), p);
         }
     }
 }
