@@ -42,14 +42,15 @@ namespace SampleRoundedButtonForms.Droid.CustomControls
             Paint pText = new Paint()
             {
                 AntiAlias = true,
+                TextAlign = Paint.Align.Center
             };
 
             pText.Color = pb.ColorText.ToAndroid();
             pText.TextSize = pb.FontSize;
             
             ////METHOD 1
-            double xPos = (pb.Width / 2f);
-            double yPos = (pb.Height / 2f) - ((pText.Descent() + pText.Ascent()) / 2f);
+            double xPos = (canvas.Width / 2f);
+            double yPos = (canvas.Height / 2f) - ((pText.Descent() + pText.Ascent()) / 2f);
 
             canvas.DrawText(pb.Text, (float)(xPos), (float)(yPos), pText);
 

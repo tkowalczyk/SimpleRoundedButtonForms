@@ -23,7 +23,7 @@ namespace SampleRoundedButtonForms
                     Stroke = Color.FromHex("d91a17"),
                     StrokeThickness = 5,
                     CornerRadius = 40,
-                    FontSize = 20,
+                    FontSize = 30,
                     Text = "Rounded Button",
 				},
 			};
