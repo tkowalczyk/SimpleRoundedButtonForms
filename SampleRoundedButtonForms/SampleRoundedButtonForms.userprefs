@@ -1,6 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus-7" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SampleRoundedButtonForms/SampleRoundedButtonForms/ViewModels/MainViewModel.cs">
+    <Files>
+      <File FileName="SampleRoundedButtonForms/SampleRoundedButtonForms/Views/MainView.cs" Line="41" Column="41" />
+      <File FileName="SampleRoundedButtonForms/SampleRoundedButtonForms/ViewModels/MainViewModel.cs" Line="10" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

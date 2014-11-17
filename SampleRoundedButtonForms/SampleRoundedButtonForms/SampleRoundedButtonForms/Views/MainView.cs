@@ -23,8 +23,7 @@ namespace SampleRoundedButtonForms.Views
 
             RoundedButton rb = new RoundedButton
                 {
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center,
+					HorizontalOptions = LayoutOptions.Center,
                     Font = Font.SystemFontOfSize(NamedSize.Large),
                     Stroke = Color.FromHex("009fff"),
                     StrokeThickness = 5,
